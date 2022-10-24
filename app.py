@@ -33,6 +33,7 @@ def create_movie():
 @app.get('/movies/search')
 def search_movies():
     # TODO: Feature 3
-    title_to_find = request.args.get('name')
-    movie_repository.get_movie_by_title(title_to_find)
-    return render_template('search_movies.html', search_active=True)
+    # movie_repository.create_movie('Star Wars', 'George Lucas', 4)
+    title = request.args.get('title')
+    movie = movie_repository.get_movie_by_title(title)
+    return render_template('search_movies.html', search_active=True, title=title, movie=movie)
