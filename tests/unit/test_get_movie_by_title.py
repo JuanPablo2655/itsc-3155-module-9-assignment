@@ -3,10 +3,11 @@ from src.repositories.movie_repository import get_movie_repository
 from src.models.movie import Movie
 
 movie_repository = get_movie_repository()
-movie_repository.create_movie('Star Wars', 'George Lucas', 4)
 
 
 def test_get_movie_by_title():
+    movie_repository._db.__init__()
+    movie_repository.create_movie('Star Wars', 'George Lucas', 4)
     movie = movie_repository.get_movie_by_title('Star Wars')
 
     assert type(movie) == Movie
