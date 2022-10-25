@@ -7,7 +7,6 @@ app = Flask(__name__)
 movie_repository = get_movie_repository()
 
 
-
 @app.get('/')
 def index():
     return render_template('index.html')
