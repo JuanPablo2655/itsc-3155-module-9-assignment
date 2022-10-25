@@ -10,6 +10,7 @@ def test_get_all_movies_no_movies_inserted():
     movieList._db.__init__()
     movies = movieList.get_all_movies()
     # Assert that the movie list is 0
+
     assert movies == []
 
 
