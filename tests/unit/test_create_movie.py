@@ -7,7 +7,7 @@ movies = get_movie_repository()
 def test_create_movie():
     movies.__init__()
     currentMovies = movies.get_all_movies()
-    get_movie_repository.create_movie('Mulholland Drive', 'David Lynch', 5)
+    movies.create_movie('Mulholland Drive', 'David Lynch', 5)
     assert len(currentMovies) == 1
-    get_movie_repository.create_movie('Wings', 'Larisa Shepitko', 5)
+    movies.create_movie('Wings', 'Larisa Shepitko', 5)
     assert len(currentMovies) == 2
