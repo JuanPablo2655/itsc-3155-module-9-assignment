@@ -3,7 +3,6 @@ from src.models.movie import Movie
 from src.repositories.movie_repository import get_movie_repository
 
 movies = get_movie_repository()
-movies._db.__init__()
 
 def test_create_movie():
     currentMovies = movies.get_all_movies()
