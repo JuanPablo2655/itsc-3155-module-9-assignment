@@ -1,6 +1,6 @@
 # TODO: Feature 2
 from src.models.movie import Movie
-from src.repositories.movie_repository import get_movie_repository
+from src.repositories.movie_repository import *
 
 movies = get_movie_repository()
 

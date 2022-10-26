@@ -4,6 +4,24 @@
 
 {% block body %}
 <h1 class="mb-5">All Movies</h1>
-<p class="mb-3">See our list of movie ratings below</p>
 <!-- TODO: Feature 1 -->
+{%if not movies %}
+        <p class="mb-3">No movies to display</p>
+{% else %}
+<p class="mb-3">See our list of movie ratings below</p>
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Director</th>
+        <th>Rating</th>
+    </tr>
+    {%for movie in movies %}
+    <tr>
+        <td>{{movie.title}}</td>
+        <td>{{movie.director}}</td>
+        <td>{{movie.rating}}</td>
+    </tr>
+    {% endfor %}
+{% endif %}
+</table>
 {% endblock %}
